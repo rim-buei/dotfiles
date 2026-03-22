@@ -1,0 +1,8 @@
+#!/bin/bash
+
+fcitx5 -d
+compton -b --config ~/.config/compton/compton.conf
+LANG=ja_JP.UTF-8 emacs --daemon
+
+~/.fehbg
+xmodmap ~/.Xmodmap
