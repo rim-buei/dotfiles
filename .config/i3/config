@@ -204,5 +204,9 @@ bar {
         status_command i3status
 }
 
+# Hide title bars
+default_border pixel 1
+default_floating_border pixel 1
+
 # Startup scripts
 exec --no-startup-id ~/.bootstrap
