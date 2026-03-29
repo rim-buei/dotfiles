@@ -50,6 +50,7 @@ This function should only modify configuration layer settings."
 
      shell-scripts
      (shell-scripts :variables
+                    shell-scripts-backend nil
                     sh-basic-offset 2)
 
      go
