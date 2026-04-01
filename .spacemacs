@@ -37,7 +37,6 @@ This function should only modify configuration layer settings."
      docker
      emacs-lisp
      git
-     ivy
      lsp
      markdown
      multiple-cursors
@@ -48,35 +47,32 @@ This function should only modify configuration layer settings."
      version-control
      yaml
 
-     shell-scripts
      (shell-scripts :variables
                     shell-scripts-backend nil
                     sh-basic-offset 2)
 
-     go
      (go :variables
          go-backend 'lsp
          go-tab-width 4
          gofmt-command "goimports"
          go-format-before-save t)
 
-     python
      (python :variables
              python-backend 'lsp)
 
-     javascript
      (javascript :variables
                  js2-basic-offset 2
                  js-indent-level 2)
 
-     typescript
      (typescript :variables
                  typescript-indent-level 2)
 
-     rust
      (rust :variables
            rust-backend 'racer
            before-save-hook 'rust-format-buffer)
+
+     (ivy :variables
+          ivy-enable-advanced-buffer-information t)
      )
 
 
@@ -606,6 +602,15 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
+  ;; Global key bindings
+  (global-set-key (kbd "C-x C-k") 'kill-this-buffer)
+  (global-set-key (kbd "C-x C-g") 'revert-buffer)
+  (global-set-key (kbd "C-x C-i") 'indent-region)
+  (global-set-key (kbd "C-c C-c") 'comment-region)
+  (global-set-key (kbd "C-c C-v") 'uncomment-region)
+  (global-set-key (kbd "M-g") 'goto-line)
+  (global-set-key (kbd "M-n") 'other-window)
+
   ;; Mozc
   (when (require 'mozc nil t)
     (setq default-input-method "japanese-mozc")
@@ -615,15 +620,6 @@ before packages are loaded."
       (setq mozc-candidate-style 'echo-area)))
   (global-set-key (kbd "M-`") 'toggle-input-method)
   (define-key isearch-mode-map (kbd "M-`") 'isearch-toggle-input-method)
-
-  ;; Global key bindings
-  (global-set-key (kbd "C-x C-k") 'kill-this-buffer)
-  (global-set-key (kbd "C-x C-g") 'revert-buffer)
-  (global-set-key (kbd "C-x C-i") 'indent-region)
-  (global-set-key (kbd "C-c C-c") 'comment-region)
-  (global-set-key (kbd "C-c C-v") 'uncomment-region)
-  (global-set-key (kbd "M-g") 'goto-line)
-  (global-set-key (kbd "M-n") 'other-window)
   )
 
 
