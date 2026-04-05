@@ -51,6 +51,9 @@ This function should only modify configuration layer settings."
                     shell-scripts-backend nil
                     sh-basic-offset 2)
 
+     (c-c++ :variables
+            c-c++-backend 'lsp-clangd)
+
      (go :variables
          go-backend 'lsp
          go-tab-width 4
