@@ -52,7 +52,8 @@ This function should only modify configuration layer settings."
                     sh-basic-offset 2)
 
      (c-c++ :variables
-            c-c++-backend 'lsp-clangd)
+            c-c++-backend 'lsp-clangd
+            c-c++-enable-clang-format-on-save t)
 
      (go :variables
          go-backend 'lsp
