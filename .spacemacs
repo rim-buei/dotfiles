@@ -624,6 +624,9 @@ before packages are loaded."
       (setq mozc-candidate-style 'echo-area)))
   (global-set-key (kbd "M-`") 'toggle-input-method)
   (define-key isearch-mode-map (kbd "M-`") 'isearch-toggle-input-method)
+
+  ;; w3m
+  (setq w3m-search-default-engine "duckduckgo")
   )
 
 
