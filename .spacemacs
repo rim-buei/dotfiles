@@ -34,6 +34,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-configuration-layers
    '(
      auto-completion
+     csv
      docker
      emacs-lisp
      git
