@@ -41,7 +41,6 @@ This function should only modify configuration layer settings."
      lsp
      markdown
      multiple-cursors
-     org
      syntax-checking
      terraform
      treemacs
@@ -81,6 +80,11 @@ This function should only modify configuration layer settings."
 
      (llm-client :variables
                  llm-client-enable-gptel t)
+
+     (org :variables
+          org-agenda-files '("~/org")
+          org-enable-modern-support t
+          org-enable-appear-support t)
      )
 
 
