@@ -78,6 +78,9 @@ This function should only modify configuration layer settings."
 
      (ivy :variables
           ivy-enable-advanced-buffer-information t)
+
+     (llm-client :variables
+                 llm-client-enable-gptel t)
      )
 
 
@@ -628,6 +631,12 @@ before packages are loaded."
 
   ;; w3m
   (setq w3m-search-default-engine "duckduckgo")
+
+  ;; gptel
+  (setq
+   gptel-model 'claude-sonnet-4-6
+   gptel-backend (gptel-make-anthropic "Claude"
+                   :stream t :key (getenv "CLAUDE_API_KEY")))
   )
 
 
