@@ -638,7 +638,7 @@ before packages are loaded."
 
   ;; gptel
   (setq
-   gptel-model 'claude-sonnet-4-6
+   gptel-model 'claude-sonnet-5
    gptel-backend (gptel-make-anthropic "Claude"
                    :host (getenv "ANTHROPIC_HOST")
                    :endpoint (getenv "ANTHROPIC_ENDPOINT")
