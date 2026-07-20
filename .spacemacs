@@ -640,8 +640,8 @@ before packages are loaded."
   (setq
    gptel-model 'claude-sonnet-5
    gptel-backend (gptel-make-anthropic "Claude"
-                   :host (getenv "ANTHROPIC_HOST")
-                   :endpoint (getenv "ANTHROPIC_ENDPOINT")
+                   :host (or (getenv "ANTHROPIC_HOST") "api.anthropic.com")
+                   :endpoint (or (getenv "ANTHROPIC_ENDPOINT") "/v1/messages")
                    :key (getenv "ANTHROPIC_AUTH_TOKEN")
                    :stream t))
   )
