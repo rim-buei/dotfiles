@@ -75,7 +75,9 @@ This function should only modify configuration layer settings."
                  js-indent-level 2)
 
      (typescript :variables
-                 typescript-indent-level 2)
+                 typescript-backend 'tide
+                 typescript-indent-level 2
+                 typescript-fmt-on-save t)
 
      (rust :variables
            rust-backend 'racer
