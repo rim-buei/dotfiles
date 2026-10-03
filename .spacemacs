@@ -79,6 +79,9 @@ This function should only modify configuration layer settings."
                  typescript-indent-level 2
                  typescript-fmt-on-save t)
 
+     (vue :variables
+          vue-backend 'lsp)
+
      (rust :variables
            rust-backend 'racer
            before-save-hook 'rust-format-buffer)
